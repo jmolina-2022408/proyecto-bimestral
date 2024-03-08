@@ -22,7 +22,7 @@ export const createCart = async (req, res) => {
 
         await cart.save();
 
-        return res.status(200).send({ message: 'Product added to the cart' });
+        return res.status(200).send({ message: 'Product added to the cart', cart, productIndex });
     } catch (err) {
         console.error(err)
         return res.status(500).send({ message: 'Product not added' });

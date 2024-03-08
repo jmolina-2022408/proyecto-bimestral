@@ -8,6 +8,6 @@ const api = Router()
 
 api.post('/addToCart', [validateJwt], createCart)
 api.delete('/removeFromCart/:id', [validateJwt], removeFromCart)
-api.delete('/deleteCart/:id', [validateJwt], deleteCart)
+api.delete('/deleteCart', [validateJwt], deleteCart)
 
 export default api
